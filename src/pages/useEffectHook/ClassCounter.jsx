@@ -17,12 +17,12 @@ export class ClassCounter extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <h2>Class Component </h2>
-        <button onClick={this.incrementCount}>
+        <button onClick={this.incrementCount} className="btn btn-primary">
           Count : {this.state.count}
         </button>
-      </>
+      </div>
     );
   }
 }

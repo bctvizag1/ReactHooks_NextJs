@@ -8,9 +8,9 @@ export default function FunctionCounter() {
   };
 
   return (
-    <>
+    <div>
       <h2>Functional Component </h2>
       <button onClick={incrementCount}>Count :{count} </button>
-    </>
+    </div>
   );
 }
