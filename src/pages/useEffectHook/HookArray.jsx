@@ -52,7 +52,7 @@ export default function HookArray() {
 
       <ul>
         {array1.map(a => (
-          <li key={a.id} className='grid grid-cols-4 gap-4 '>
+          <li key={a.id} className='flex '>
             <span>{a.id} </span> <span>{a.value}</span>
 
             <button className='bg-lime-600' onClick={() => {

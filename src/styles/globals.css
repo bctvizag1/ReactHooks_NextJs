@@ -1,20 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.btn {
-  @apply px-3 py-1 mx-1 shadow-sm transition ease-in-out duration-300 rounded leading-snug whitespace-nowrap text-base font-semibold;
-}
-
-
-.btn-primary {
-  @apply text-white bg-blue-500;
-}
-
-button {
-  @apply btn btn-primary;
-}
-
 section {
   display: flex;
 }
@@ -26,13 +9,6 @@ section>div {
   padding: 10px;
 }
 
-input {
-  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
-}
-
-input:focus {
-  @apply outline-none border-b-2 border-b-red-300
-}
 
 hr {
   margin-top: 5px;
@@ -43,6 +19,10 @@ h2 {
   font-weight: bolder;
 }
 
+.flex {
+  display: flex;
+  gap: 3px;
+}
 
 .panel-light,
 .panel-dark {
