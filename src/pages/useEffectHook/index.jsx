@@ -1,7 +1,7 @@
 import React from "react";
 import ClassCounter from "./ClassCounter";
 import FunctionCounter from "./FunctionCounter";
-import styles from "@/styles/Home.module.css";
+// import styles from "@/styles/Home.module.css";
 import Counter2 from "./Counter2";
 import Hook3 from "./Hook3";
 import HookArray from "./HookArray";
