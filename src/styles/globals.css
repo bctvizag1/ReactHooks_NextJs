@@ -22,6 +22,7 @@ h2 {
 .flex {
   display: flex;
   gap: 3px;
+  justify-content: space-between;
 }
 
 .panel-light,

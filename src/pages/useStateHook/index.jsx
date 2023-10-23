@@ -17,8 +17,6 @@ export default function index() {
         <Hook3></Hook3>
         <HookArray></HookArray>
       </section>
-
-      <h1>UseEffect</h1>
     </div>
   );
 }
