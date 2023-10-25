@@ -8,7 +8,7 @@ import HookArray from "./HookArray";
 
 export default function index() {
   return (
-    <div className="container mx-auto px-1">
+    <div className="container">
       <h1>useState Hooks</h1>
       <section>
         <ClassCounter></ClassCounter>

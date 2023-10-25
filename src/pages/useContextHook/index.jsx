@@ -4,11 +4,11 @@ import Example2 from './Example2'
 
 export default function index() {
   return (
-    <div>
-      <h2>Use Context Hook</h2>
+    <section>
+
       <Example1></Example1>
-      <hr />
+
       <Example2></Example2>
-    </div>
+    </section>
   )
 }
