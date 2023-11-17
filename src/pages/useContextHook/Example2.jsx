@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
+import Panel from './Panel';
 
-const ThemeContext = createContext(null)
+export const ThemeContext = createContext(null)
 
 export default function Example2() {
   const [theme, setTheme] = useState('light');
@@ -33,16 +34,8 @@ function Form({ children }) {
 
 }
 
-function Panel({ title, children }) {
-  const theme = useContext(ThemeContext);
-  const className = 'panel-' + theme;
-  return (
-    <div className={className}>
-      <h1>{title}</h1>
-      {children}
-    </div>
-  )
-}
+
+
 
 function Btn({ children }) {
   const theme = useContext(ThemeContext);

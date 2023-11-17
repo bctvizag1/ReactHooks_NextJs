@@ -1,4 +1,6 @@
-import React, { useReducer } from 'react'
+import React, { createContext, useReducer } from 'react'
+import CounterBtn from './CounterBtn';
+
 import style from '@/styles/Home.module.css'
 
 const initstate = {
@@ -14,11 +16,14 @@ const reducer = (state, action) => {
       return initstate
   }
 }
+export const counterContext = createContext(null)
 
 export default function Reducer1() {
   const [count, dispatch] = useReducer(reducer, initstate)
   return (
-    <div>
+
+
+    <counterContext.Provider value={{ count: count, countDispatch: dispatch }}>
       <h2>Reducer Example 1</h2>
       <p>Count = {count.firstCounter}</p>
       <div className={style.test}>
@@ -26,7 +31,13 @@ export default function Reducer1() {
         <button onClick={() => { dispatch({ type: 'decrement', value: 1 }) }} >decrement</button>
         <button onClick={() => { dispatch({ type: 'reset', value: 1 }) }} >reset</button>
       </div>
+      <hr />
+      <CounterBtn></CounterBtn>
 
-    </div>
+    </counterContext.Provider>
+
+
   )
 }
+
+

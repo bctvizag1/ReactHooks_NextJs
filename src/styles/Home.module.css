@@ -1,5 +1,5 @@
-.test {
-  display: flex;
-  /* border: 1px solid black; */
-  justify-content: space-between;
+.test h2 {
+  /* background-color: lightgreen; */
+  @apply bg-slate-400 text-center text-2xl font-bold;
 }
+
