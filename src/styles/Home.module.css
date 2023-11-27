@@ -1,5 +1,23 @@
-.test h2 {
+.main {
+  @apply flex items-center justify-between p-24 flex-col min-h-screen  bg-green-400; 
+  
+}
+.main h2 {
   /* background-color: lightgreen; */
-  @apply bg-slate-400 text-center text-2xl font-bold;
+  @apply text-center text-3xl font-bold;
+}
+
+.main form, .displist {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  gap: 5px;
+}
+
+.main form input {
+  @apply p-3 border rounded;
+}
+
+.main button {
+  @apply text-white bg-slate-950 hover:bg-slate-800 rounded text-xl p-1;
 }
 
