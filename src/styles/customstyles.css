@@ -1,0 +1,17 @@
+.button-light {
+    color: red;
+}
+
+.button-dark {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.panel-dark {
+   
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% );
+}
+
+.panel-light {
+    background: linear-gradient(45deg, oranged, lightgreen);
+}
