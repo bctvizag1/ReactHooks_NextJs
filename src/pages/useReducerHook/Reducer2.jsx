@@ -1,27 +1,74 @@
-import React, { createContext, useContext } from 'react'
-import LoanList from './LoanList';
+import React, { useReducer } from 'react'
 
-let nextid = 3;
-const initLoan = [
-  { id: 0, type: 'P', amt: 10000, balance: 0, rate: 12 },
-  { id: 1, type: 'P', amt: 1000, balance: 0, rate: 12 },
-  { id: 3, type: 'R', amt: 20000, balance: 0, rate: 12 },
-]
+const initialState = {
+  firstName: 'Rao',
+  lastName: '',
+  password: '',
+  repeatPassword: '',
+  email: '',
+}
 
-const LoanContext = createContext(null)
+function reducer(state, action) {
+  switch (action.type) {
+    case 'changeValue':
+      return { ...state, [action.field]: action.value };
+    case 'reset':
+      return initialState;
+    default:
+      return state;
+  }
+}
 
-export default function Reducer2() {
+function CustomInput({ type = "text", labelText, value, id, onChange, ...otherProps }) {
   return (
-    <div>
-      <h2>Reducer 2</h2>
-      <LoanContext.Provider value={initLoan}>
-        <LoanList ></LoanList>
-      </LoanContext.Provider>
+    <div className="flex flex-col gap-2">
+      <label htmlFor={id}>{labelText}</label>
+      <input
+        type={type}
+        id={id}
+        value={value}
+        onChange={onChange}
+        className="border p-2 rounded"
+        {...otherProps}
+      />
     </div>
   )
 }
 
-export function useLoanContext() {
-  return useContext(LoanContext)
+const Reducer2 = () => {
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  const handleChange = (field) => (e) => {
+    dispatch({
+      type: "changeValue",
+      field: field,
+      value: e.target.value
+    })
+  }
+
+  return (
+    <div className="p-4">
+      <div className="grid grid-cols-2 gap-4">
+        <CustomInput
+          labelText="First Name"
+          id="firstName"
+          value={state.firstName}
+          onChange={handleChange('firstName')}
+        />
+        <CustomInput
+          labelText="Last Name"
+          id="lastName"
+          value={state.lastName}
+          onChange={handleChange('lastName')}
+        />
+      </div>
+
+      <hr className="my-4" />
+      <pre className="bg-gray-100 p-2 rounded">
+        {JSON.stringify(state, null, 2)}
+      </pre>
+    </div>
+  )
 }
 
+export default Reducer2
