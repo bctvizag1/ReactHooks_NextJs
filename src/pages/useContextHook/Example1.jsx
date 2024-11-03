@@ -39,11 +39,13 @@ function FirstChild() {
   const { style, toggleStyle, visible, toggleVisible, userName } =
     useContext(ThemeContext);
   return (
-    <div className="bg-green-300">
+    <div className="bg-indigo-100">
       <p>Hello !!! {userName}</p>
       <p>
-        The theme is <em>{style}</em> and state of visibility is
-        <em> {visible.toString()}</em>
+        The theme is 
+         <em className={style==="light"?"text-black bg-white":"text-white bg-black"}> {style} </em> 
+          and state of visibility is
+        <em className={visible?"text-green-500":"text-red-500"}> {visible.toString()}</em>
       </p>
       <button onClick={toggleStyle}>Change Theme</button>
       <button onClick={toggleVisible}>Change Visibility</button>

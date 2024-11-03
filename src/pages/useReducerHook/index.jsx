@@ -12,8 +12,12 @@ export default function index() {
         <Reducer1></Reducer1>
         <Reducer2></Reducer2>
         <TaskManager></TaskManager>
+        
+      </section>
+      <section>
         <Datafetching></Datafetching>
       </section>
+      
     </div>
   );
 }

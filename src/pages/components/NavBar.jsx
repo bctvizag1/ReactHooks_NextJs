@@ -20,15 +20,21 @@ export default function NavBar() {
           </Link>
         </li>
         <li className="hover:bg-green-300">
+          <Link rel="stylesheet" href="/useReducerHook">
+            UseReducer Hook
+          </Link>
+        </li>
+        <li className="hover:bg-green-300">
           <Link rel="stylesheet" href="/useContextHook">
             UseContext Hook
           </Link>
         </li>
         <li className="hover:bg-green-300">
-          <Link rel="stylesheet" href="/useReducerHook">
-            UseReducer Hook
+          <Link rel="stylesheet" href="/useRefHook">
+            UseRef Hook
           </Link>
         </li>
+
       </ol>
     </header>
   );
